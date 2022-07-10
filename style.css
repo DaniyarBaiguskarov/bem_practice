@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.header {
+
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+
+    flex-basis: 1168px;
+    margin: 0 20px;
+
+}
+
+
+.logo {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.header__search-form {
+    flex: 1 1 899px;
+    margin: 20px 40px 20px 40px;
+}
+
+
+.search-form {
+    display: flex;
+    height: 40px;
+    border: 1px solid #EBEBF1;
+    border-radius: 5px;
+}
+
+.serach-form__button {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    background-image: url(/img/header/Search-button.svg);
+    margin: 8px 0 8px 10px;
+    cursor: pointer;
+}
+
+.search-form__input {
+    width: 100%;
+    border: none;
+    padding-left: 39px;
+}
+
+.search-form__input::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+
+
+
+    color: #BBC4D6;
+}
+
+.header__profile {
+    border-left: 1px solid #EBEBF1;
+    padding: 20px 0 20px 19px;
+
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 149px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.profile__name {
+    width: 79px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    color: #768298;
+}
+
+.profile__avatar {
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    background-image: url(/img/header/Avatar.svg);
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 70px 0 0 0;
+    padding: 0 20px;
+
+}
+
+.main__header {
+    flex-basis: 1170px;
+    height: 58px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 160%;
+
+
+    text-transform: uppercase;
+
+
+    margin-bottom: 15px;
+
+    color: #121920;
+}
+
+.main__items {
+    flex-basis: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 0 -15px;
+
+}
+
+.main__item-wrapper {
+    
+    flex: 0 0 calc((100% - 120px)/4);
+    height: 120px;
+    margin: 15px 15px;
+    border: 1px solid #EBEBF1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.main__item-wrapper:hover {
+    box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
+}
+
+
+
+
+@media (max-width:768px) and (min-width:376px) {
+    .header-wrapper {
+        margin: 0 20px 0 20px;
+    }
+
+    .header__search-form {
+        flex: 1 1 459px;
+    }
+
+    .main__header {
+        flex-basis: 728px;
+        height: 45px;
+    }
+
+    .main__items {
+        flex-basis: 748px;
+    }
+
+    .main__item-wrapper {
+        flex: 0 0 calc((100% - 60px)/3);
+        margin: 15px 10px 10px 10px;
+    }
+
+}
+
+@media (max-width:376px) {
+    .header {
+        height: 105px;
+    }
+
+    .header__logo {
+        margin: 17px 0 16px 20.97px;
+    }
+
+    .header__search-form {
+        order: 3;
+        flex-basis: 100vw;
+        margin: 0;
+
+
+        z-index: -1;
+
+    }
+
+    .search-form {
+        border: none;
+        border-top: 1px solid #BBC4D6;
+    }
+
+    .search-form__input {
+        padding-left: 49px;
+    }
+
+    .header-wrapper {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .serach-form__button {
+
+
+        margin: 8px 0 8px 20px;
+    }
+
+    .profile__name {
+        display: none;
+    }
+
+    .profile__avatar {
+        display: none;
+    }
+
+    .profile {
+        width: 24px;
+        height: 24px;
+
+        background: url(/img/header/Phone-user.svg) no-repeat;
+    }
+
+    .header__profile {
+        align-self: center;
+        border: none;
+        padding: 0;
+        margin: 26.23px 20.97px 22.77px 0;
+
+    }
+
+    .main__header {
+        flex-basis: 335px;
+        height: 45px;
+        font-size: 28px;
+
+    }
+
+    .main__items {
+        margin: 15px 0 0 0;
+        flex-basis: 335px;
+    }
+
+    .main__item-wrapper {
+        max-width: 335px;
+        height: 140px;
+        margin: 0 0 20px 0;
+        flex: 0 0 100%;
+    }
+
+}
